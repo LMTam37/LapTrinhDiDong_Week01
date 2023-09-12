@@ -94,20 +94,10 @@ getTheWinner = (team1, team2) => {
     if (avgTeam1Score < 100 && avgTeam2Score < 100) {
         return "No team win";
     }
-    if (avgTeam1Score < 100) {
-        return "Koalas win";
-    }
-    if (avgTeam2Score < 100) {
-        return "Dolphin win";
-    }
     if (avgTeam1Score == avgTeam2Score) {
         return "Draw";
     }
-    if (avgTeam1Score > avgTeam2Score) {
-        return "Dolphin win";
-    } else {
-        return "Koalas win";
-    }
+    return avgTeam1Score > avgTeam2Score ? "Dolphin win" : "Koalas win"
 }
 
 console.log("Data 1: " + getTheWinner(Dolphins1, Koalas1));
