@@ -107,3 +107,26 @@ for (cost of bill) {
     var tip = getTip(cost);
     console.log(`The bill was ${cost}, the tip was ${tip}, and the total value ${cost + tip}`);
 }
+//bai 5
+console.log("bai 5");
+Dolphins1 = [44, 23, 71]
+Koalas1 = [65, 54, 49]
+
+Dolphins2 = [85, 54, 41]
+Koalas2 = [23, 34, 27]
+calcAverage = (team) => {
+    total = 0
+    for (score of team) {
+        total += score;
+    }
+    return total / team.length
+}
+
+checkWinner = (dolphin, koalas) => {
+    avgDolhins = calcAverage(dolphin);
+    avgKoalas = calcAverage(koalas);
+    return avgDolhins > avgKoalas ? `Dolphins win (${avgDolhins} vs. ${avgKoalas})` : `Koalas win (${avgKoalas} vs. ${avgDolhins})`
+}
+
+console.log(checkWinner(Dolphins1, Koalas1));
+console.log(checkWinner(Dolphins2, Koalas2));
