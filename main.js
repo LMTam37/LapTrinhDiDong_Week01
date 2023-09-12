@@ -187,3 +187,18 @@ calcAverage = (arr) => {
 }
 
 console.log("avg:", calcAverage(totals));
+//bai 9
+console.log("bai 9");
+printForecast = (forecast) => {
+    result = ""
+    for (i in forecast) {
+        result += `... ${forecast[i]}oC in ${Number(i) + 1} days`;
+    }
+    return result;
+}
+
+forecast1 = [17, 21, 23];
+forecast2 = [12, 5, -5, 0, 4];
+
+console.log(printForecast(forecast1));
+console.log(printForecast(forecast2));
