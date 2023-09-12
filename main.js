@@ -166,3 +166,24 @@ console.log(calcBmi(Mark) > calcBmi(John)
     ? `Mark's BMI (${calcBmi(Mark)}) is higher than John's (${calcBmi(John)})`
     : `John's BMI (${calcBmi(John)}) is higher than Mark's (${calcBmi(Mark)})`
 );
+//bai 8
+console.log("bai 8");
+bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+tips = []
+totals = []
+for (i = 0; i < bills.length; i++) {
+    tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(bills[i] + tip)
+}
+console.log("bills:", bills, "tips:", tips, "totals:", totals);
+
+calcAverage = (arr) => {
+    sum = 0;
+    for (cur of arr) {
+        sum += cur;
+    }
+    return sum / arr.length;
+}
+
+console.log("avg:", calcAverage(totals));
