@@ -60,17 +60,56 @@ printResult(Mark1, Jhon1)
 
 printResultWithBmi(Mark1, Jhon1)
 
-Mark = {
-    mass: 95,
-    height: 1.88
-}
-
-Jhon = {
-    mass: 85,
-    height: 1.76
-}
 console.log("data 2");
 
 printResult(Mark2, Jhon2)
 
-printResultWithBmi(Mark2, Jhon2)
+printResultWithBmi(Mark2, Jhon2);
+//bai 3
+console.log("bai 3");
+
+Dolphins1 = [96, 108, 89]
+
+Koalas1 = [88, 91, 110]
+
+Dolphins2 = [97, 112, 101]
+
+Koalas2 = [109, 95, 123]
+
+Dolphins3 = [97, 112, 101]
+
+Koalas3 = [109, 95, 106]
+
+getAvgScore = (team) => {
+    total = 0;
+    for (score of team) {
+        total += score;
+    }
+    return total / 3
+}
+
+getTheWinner = (team1, team2) => {
+    avgTeam1Score = getAvgScore(team1);
+    avgTeam2Score = getAvgScore(team2);
+    if (avgTeam1Score < 100 && avgTeam2Score < 100) {
+        return "No team win";
+    }
+    if (avgTeam1Score < 100) {
+        return "Koalas win";
+    }
+    if (avgTeam2Score < 100) {
+        return "Dolphin win";
+    }
+    if (avgTeam1Score == avgTeam2Score) {
+        return "Draw";
+    }
+    if (avgTeam1Score > avgTeam2Score) {
+        return "Dolphin win";
+    } else {
+        return "Koalas win";
+    }
+}
+
+console.log("Data 1: " + getTheWinner(Dolphins1, Koalas1));
+console.log("Data Bonus 1: " + getTheWinner(Dolphins2, Koalas2));
+console.log("Data Bonus 2: " + getTheWinner(Dolphins3, Koalas3));
