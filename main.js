@@ -113,3 +113,15 @@ getTheWinner = (team1, team2) => {
 console.log("Data 1: " + getTheWinner(Dolphins1, Koalas1));
 console.log("Data Bonus 1: " + getTheWinner(Dolphins2, Koalas2));
 console.log("Data Bonus 2: " + getTheWinner(Dolphins3, Koalas3));
+//bai 4
+console.log("bai 4");
+bill = [275, 40, 430]
+
+getTip = (cost) => {
+    return cost >= 50 && cost <= 300 ? cost * 0.15 : cost * 0.2;
+}
+
+for (cost of bill) {
+    var tip = getTip(cost);
+    console.log(`The bill was ${cost}, the tip was ${tip}, and the total value ${cost + tip}`);
+}
