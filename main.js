@@ -38,21 +38,13 @@ console.log(markHigherBMI(Mark2, Jhon2));
 //bai 2
 console.log("bai 2");
 printResult = (o1, o2) => {
-    result = markHigherBMI(o1, o2)
-    if (result) {
-        console.log("Mark's BMI is higher than John's!");
-    } else {
-        console.log("John's BMI is higher than Mark's!");
-    }
+    return markHigherBMI(o1, o2) ? console.log("Mark's BMI is higher than John's!") : console.log("John's BMI is higher than Mark's!");
 }
 
 printResultWithBmi = (o1, o2) => {
-    result = markHigherBMI(o1, o2)
-    if (result) {
-        console.log("Mark's BMI " + Math.round(bmi(o1) * 10) / 10 + " is higher than John's " + Math.round(bmi(o2) * 10) / 10 + " !");
-    } else {
-        console.log("John's BMI " + Math.round(bmi(o2) * 10) / 10 + " is higher than Mark's " + Math.round(bmi(o1) * 10) / 10 + " !");
-    }
+    return markHigherBMI(o1, o2) ?
+        `Mark's BMI  + Math.round(bmi(o1) * 10) / 10 + " is higher than John's " + Math.round(bmi(o2) * 10) / 10 + " !")` :
+        `John's BMI ${Math.round(bmi(o2) * 10) / 10} is higher than Mark's ${Math.round(bmi(o1) * 10) / 10} !`;
 }
 console.log("data 1");
 
